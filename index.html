@@ -58,9 +58,18 @@ function go_ap() {
 }
 
 
-
+go_low();
+setTimeout(function () {
+    go_ap() 
+}, 1000);
 go_low();
 
+setTimeout(function () {
+    setTimeout(function () {
+        go_ap() 
+    }, 1000);
+    go_low();  
+}, 2000)
 
 
 </script>
